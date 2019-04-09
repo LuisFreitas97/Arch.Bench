@@ -1,4 +1,6 @@
-﻿namespace ArchBench.Server
+﻿using System.Windows.Forms;
+
+namespace ArchBench.Server
 {
     partial class ArchServerForm
     {
@@ -72,6 +74,7 @@
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
+            this.mServerName = new System.Windows.Forms.ToolStripTextBox();
             // 
             // menuStrip1
             // 
@@ -253,7 +256,7 @@
             this.customizeToolStripMenuItem,
             this.optionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // customizeToolStripMenuItem
@@ -317,6 +320,7 @@
             this.toolStripSeparator6,
             this.mRegistButton,
             this.mRemoteServerAddress,
+            this.mServerName,
             this.toolStripSeparator7,
             this.mPluginsTool});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
@@ -371,6 +375,12 @@
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // mServerName
+            // 
+            this.mServerName.Name = "mServerName";
+            this.mServerName.Text = "Server name";
+            this.mServerName.Size = new System.Drawing.Size(120, 25);
             // 
             // mPluginsTool
             // 
@@ -465,6 +475,7 @@
         private System.Windows.Forms.ToolStripButton mRegistButton;
         private System.Windows.Forms.ToolStripTextBox mRemoteServerAddress;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripTextBox mServerName;
     }
 }
 

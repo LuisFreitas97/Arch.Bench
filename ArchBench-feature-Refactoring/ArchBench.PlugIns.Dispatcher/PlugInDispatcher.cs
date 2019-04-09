@@ -52,7 +52,9 @@ namespace ArchBench.PlugIns.Dispatcher
 
                         char operation = data[0];
                         string server  = data.Substring( 1, data.IndexOf( '-', 1 ) - 1 );
-                        string port    = data.Substring( data.IndexOf( '-', 1 ) + 1 );
+                        int portLength = data.IndexOf('-', data.IndexOf('-', 1) + 1) - (data.IndexOf('-', 1) + 1);
+                        string port    = data.Substring(data.IndexOf('-', 1) + 1, portLength);
+
                         switch ( operation )
                         {
                             case '+' : 

@@ -55,9 +55,10 @@ namespace ArchBench.Server
         {
             try 
             {
-                TcpClient client = new TcpClient( mRemoteServerAddress.Text, 9000 );
+                //TcpClient client = new TcpClient( mRemoteServerAddress.Text, 9000 );
+                TcpClient client = new TcpClient(mRemoteServerAddress.Text, 9000);
 
-                Byte[] data = Encoding.ASCII.GetBytes( $"{( mRegistButton.Checked ? '+' : '-' )}{ GetServerIP() }-{ mPort.Text }" );         
+                Byte[] data = Encoding.ASCII.GetBytes( $"{( mRegistButton.Checked ? '+' : '-' )}{ GetServerIP() }-{ mPort.Text }-{mServerName.Text}" );         
 
                 NetworkStream stream = client.GetStream();
                 stream.Write( data, 0, data.Length );
